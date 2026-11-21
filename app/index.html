@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoverForge — GTA-style Cover Art Maker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">CF</span>
+    <div class="brand-text">
+      <h1>CoverForge</h1>
+      <p>Multi-panel cover art maker — your photos, your caption, one PNG.</p>
+    </div>
+  </div>
+  <button id="exportBtn" class="export-btn" type="button">Export PNG</button>
+</header>
+
+<main class="layout">
+  <section class="stage">
+    <canvas id="poster" width="1080" height="1350"></canvas>
+    <p class="hint">Click a panel on the poster to select it — drag on it to pan its artwork, or frame it with the sliders.</p>
+  </section>
+
+  <aside class="controls">
+    <fieldset>
+      <legend>Poster</legend>
+      <div class="row" role="radiogroup" aria-label="Poster size">
+        <label class="chip"><input type="radio" name="size" value="1080x1080"> Square 1080×1080</label>
+        <label class="chip"><input type="radio" name="size" value="1080x1350" checked> Portrait 1080×1350</label>
+        <label class="chip"><input type="radio" name="size" value="1920x1080"> Wide 1920×1080</label>
+      </div>
+      <div class="row" aria-label="Style preset">
+        <button type="button" class="style-btn is-active" data-style="neon">Neon Vice</button>
+        <button type="button" class="style-btn" data-style="sunset">Sunset Coast</button>
+        <button type="button" class="style-btn" data-style="midnight">Midnight</button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Cover text</legend>
+      <label class="field">Game title
+        <input id="titleInput" type="text" value="GRAND THEFT AUTO VI" maxlength="60">
+      </label>
+      <label class="field">Tagline
+        <input id="taglineInput" type="text" value="WELCOME BACK TO LEONIDA" maxlength="60">
+      </label>
+      <label class="check"><input id="badgeToggle" type="checkbox" checked> Show the “VI” badge</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Selected panel</legend>
+      <div id="panelStrip" class="panel-strip" aria-label="Choose a panel"></div>
+      <label class="field">Panel artwork
+        <select id="sceneSelect"></select>
+      </label>
+      <div class="row">
+        <button id="uploadBtn" type="button">Upload my photo…</button>
+        <button id="fillAllBtn" type="button">Photo in every panel</button>
+      </div>
+      <label class="field">Zoom <span id="zoomVal" class="val">1.00×</span>
+        <input id="zoomRange" type="range" min="1" max="3" step="0.01" value="1">
+      </label>
+      <label class="field">Shift left / right <span id="xVal" class="val">0</span>
+        <input id="xRange" type="range" min="-100" max="100" step="1" value="0">
+      </label>
+      <label class="field">Shift up / down <span id="yVal" class="val">0</span>
+        <input id="yRange" type="range" min="-100" max="100" step="1" value="0">
+      </label>
+      <button id="resetPanelBtn" type="button" class="ghost">Reset this panel</button>
+    </fieldset>
+
+    <p class="note">Photos are read on your machine only — nothing is uploaded. Exports are full-size PNGs in the size picked above.</p>
+  </aside>
+</main>
+
+<input id="photoFile" type="file" accept="image/*" hidden>
+<script type="module" src="app.js"></script>
+</body>
+</html>
