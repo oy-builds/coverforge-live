@@ -64,7 +64,8 @@ node smoke.test.mjs
 - `smoke.test.mjs` — smoke tests for structure, limits and determinism
 
 All artwork in the app and the screenshots is original; the scene
-presets and cover photos are original.
+presets are drawn in code and the "photo" panels in the screenshots use
+procedurally painted portraits, not pictures of real people.
 
 ## License
 
