@@ -1,3 +1,7 @@
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/oy-builds/coverforge-live/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/oy-builds/coverforge-live/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
 # CoverForge — GTA-style Cover Art Maker
 
 CoverForge turns your own photos and a caption into a multi-panel,
@@ -60,8 +64,7 @@ node smoke.test.mjs
 - `smoke.test.mjs` — smoke tests for structure, limits and determinism
 
 All artwork in the app and the screenshots is original; the scene
-presets are drawn in code and the "photo" panels in the screenshots use
-procedurally painted portraits, not pictures of real people.
+presets and cover photos are original.
 
 ## License
 
